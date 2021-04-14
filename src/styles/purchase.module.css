@@ -1,0 +1,89 @@
+.purchase_container {
+    padding: 0 10rem;
+}
+
+.purchase_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase_content small {
+  color: #6e6e6e;
+}
+
+.purchase_order_details {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.purchase_order_st {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #2666cc;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.purchase_buyer_details {
+  margin-left: 2rem;
+}
+
+.purchase_account h3 {
+  padding-bottom: 0.4rem;
+}
+
+.purchase_buyer_input {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase_buyer_input label {
+  font-size: 0.8rem;
+  color: #6e6e6e;
+  padding-bottom: 8px; 
+}
+
+.purchase_buyer_input input {
+  padding: 12px;
+  border: 1px solid rgb(189, 191, 196);
+  border-radius: 3px;
+  width: 70%;
+}
+
+.purchase_buyer_input div button {
+  margin-left: 1rem;
+  padding: 12px 15px;
+  color: #fff;
+  background: #cac9c9;
+  border-radius: 3px;
+  border: 1px solid #cac9c9;
+  width: 25%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.purchase_buyer_input div {
+  width: 100%;
+}
+
+.purchase_address {
+  padding: 2rem 0;
+}
+
+.purchase_items {
+    padding: 2rem;
+    border-left: 1px solid #afadad;
+}
+
+.purchase_items_content {
+   display: flex; 
+   justify-content: space-between;
+}
+
+.purchase_items_content small {
+  text-decoration: underline;
+}

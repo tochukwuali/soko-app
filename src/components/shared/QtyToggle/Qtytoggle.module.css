@@ -1,0 +1,19 @@
+.toggle_container {
+  width: 4rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  border: 2px solid #2666cc80;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle_minus, .toggle_plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dbe9ff;
+  width: 18px;
+  color: #2666cc;
+  font-size: 20px;
+  cursor: pointer;
+}
