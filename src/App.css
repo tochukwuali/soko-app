@@ -76,4 +76,8 @@ p {
   .hd {
     display: none;
   }
+
+  .app__container {
+    margin-bottom: 50px;
+  }
 }

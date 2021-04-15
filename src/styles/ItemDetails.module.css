@@ -3,28 +3,28 @@
 }
 
 .details_content {
- display: flex;
- /* padding: 1rem 8rem; */
- /* justify-content: space-between; */
+  display: flex;
+  /* padding: 1rem 8rem; */
+  /* justify-content: space-between; */
 }
 
 .carousel_image {
-width: 50%;
+  width: 50%;
 }
 
 .carousel_image img {
   width: 90%;
-  border-radius: 5px;;
+  border-radius: 5px;
 }
 
 .list_style {
   position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .list_style button {
@@ -42,7 +42,7 @@ width: 50%;
 }
 
 .list_style button::before {
-  opacity: .75;
+  opacity: 0.75;
   color: #2666cc;
   font-size: 12px;
   line-height: 2px;
@@ -51,7 +51,7 @@ width: 50%;
   left: 0;
   width: 20px;
   height: 20px;
-  content: '•';
+  content: "•";
   text-align: center;
 }
 
@@ -70,36 +70,32 @@ width: 50%;
 }
 
 .details_text p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
-.details_price{
-    padding: 1rem 0;
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
+.details_price {
+  margin-top: -1rem;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
 }
 
 .details_price .details_discount {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #cf5d5d;
   border: 1px solid #cf5d5d;
   border-radius: 3px;
   width: 2.5rem;
   color: white;
-  height: 1.1rem;
+  height: 1.2rem;
   font-size: 13px;
-  cursor: pointer;
 }
 
 .details_price p {
   font-size: 1.2rem;
   color: #000;
-  margin-top: -1.2rem;
-}
-
-.details_price {
-   margin-top: -1.5rem;
 }
 
 .details_toggle {
@@ -126,23 +122,23 @@ width: 50%;
 }
 
 .details_buy_btn {
-    /* margin-top: 1.2rem; */
-    background: #f3d632;
-   
-    width: 30%;
-    border: 1px solid #f3d632;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 18px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-left: 0.8rem;
-    text-align: center;
+  /* margin-top: 1.2rem; */
+  background: #f3d632;
+
+  width: 30%;
+  border: 1px solid #f3d632;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 0.8rem;
+  text-align: center;
 }
 
 .details_buy_btn a {
   text-decoration: none;
-   color: #2666cc;
+  color: #2666cc;
 }
 
 .details_rproducts {
@@ -165,10 +161,9 @@ width: 50%;
 
 .carousel_rel_image p {
   margin-top: 1rem;
-  
 }
 
-.carousel_rel_image img{
+.carousel_rel_image img {
   width: 100%;
   border-radius: 5px;
 }

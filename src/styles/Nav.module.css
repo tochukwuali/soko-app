@@ -67,6 +67,15 @@
     padding: 0;
   }
 
+  .bottom_navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .bottom_navbar div {
+    background: yellow;
+  }
+
   .navbar__right {
     display: none;
   }

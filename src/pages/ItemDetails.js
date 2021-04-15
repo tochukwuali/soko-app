@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import styles from "../styles/ItemDetails.module.css";
 import { ProductContext } from "../GlobalState";
@@ -52,8 +52,20 @@ const ItemDetails = ({ match }) => {
       </div>
     ),
   };
-  const { selectedI } = useContext(ProductContext);
-  const item = selectedI.items[match.params.id - 1];
+
+  const { selectedI, products } = useContext(ProductContext);
+
+  const items =
+    JSON.stringify(selectedI) !== "{}"
+      ? selectedI.items[match.params.id]
+      : products[0].items[match.params.id];
+  useEffect(() => {
+    if (JSON.stringify(selectedI) !== "{}") {
+      setState(items);
+    }
+  }, [selectedI, items]);
+
+  const [state, setState] = useState(items);
   return (
     <div>
       <div className={styles.details_container}>
@@ -61,34 +73,34 @@ const ItemDetails = ({ match }) => {
           <div className={styles.details_image_carousel}>
             <Slider {...firstSettings} style={{ width: "30vw" }}>
               <div className={styles.carousel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
               </div>
               <div className={styles.carousel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
               </div>
               <div className={styles.carousel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
               </div>
               <div className={styles.carousel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
               </div>
             </Slider>
           </div>
           <div className={styles.details_wrapper}>
             <div className={styles.details_text}>
-              <h4>{item.name}</h4>
-              <p>{item.description}</p>
+              <h4>{state.name}</h4>
+              <p>{state.description}</p>
             </div>
             <div className={styles.details_price}>
-              <p>UGX {item.price}</p>
-              {item.discount ? (
+              <p>UGX {state.price}</p>
+              {state.discount ? (
                 <div className={styles.details_discount}>
-                  <small>-{item.discount}%</small>
+                  <small>-{state.discount}%</small>
                 </div>
               ) : null}
             </div>
             <div className={styles.details_toggle}>
-              <QtyToggle />
+              <QtyToggle value={1} />
             </div>
             <div className={styles.details_btngroup}>
               <button>Add to Bag</button>
@@ -104,35 +116,35 @@ const ItemDetails = ({ match }) => {
           <div className={styles.details_rproducts_carousel}>
             <Slider {...secondSettings} style={{ width: "100vw" }}>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
               <div className={styles.carousel_rel_image}>
-                <img src={item.image} alt="" />
+                <img src={state.image} alt="" />
                 <p>Related Product</p>
               </div>
             </Slider>

@@ -1,17 +1,17 @@
-.footer__container{
-    padding: 2rem;
-    text-align: center;
+.footer__container {
+  padding: 2rem;
+  text-align: center;
 }
 
-.footer__container>p {
+.footer__container > p {
   font-weight: 300;
   font-size: 0.8rem;
   color: #adacac;
 }
 
 .footer__body {
-    margin-top: 15px; 
-    text-align: center; 
+  margin-top: 15px;
+  text-align: center;
 }
 
 .footer__body p {
@@ -20,25 +20,41 @@
 }
 
 .footer__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
 }
 
 .footer__btn button {
- color: #fff;
- background: #40C351;
- border: 1px solid #40C351;
- padding: 5px 8px;
- border-radius: 3px;
- display: flex;
- justify-content: center;
- align-items: center;
- 
+  color: #fff;
+  background: #40c351;
+  border: 1px solid #40c351;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__btn button img {
   width: 23px;
   padding: 0 2px;
+}
+
+@media (max-width: 700px) {
+  .footer__container {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .footer__body {
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  .footer__btn {
+    display: flex;
+    margin-top: 1.2rem;
+  }
 }

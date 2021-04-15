@@ -11,7 +11,11 @@ import { Count } from "../components/shared/StyledDiv";
 import { ProductContext } from "../GlobalState";
 
 const HomeScreen = () => {
-  const { products, selectCategory, selectedI } = useContext(ProductContext);
+  const { products, selectCategory } = useContext(ProductContext);
+  const handleCatOpen = (id) => {
+    selectCategory(id);
+  };
+
   return (
     <div>
       <div className={styles.hm__container}>
@@ -43,7 +47,7 @@ const HomeScreen = () => {
               <div key={product.id}>
                 <div
                   className={styles.product__category}
-                  onClick={() => selectCategory(product.id)}
+                  onClick={() => handleCatOpen(product.id)}
                 >
                   <p>{product.category} </p>
                   <span>({product.count})</span>
@@ -65,7 +69,7 @@ const HomeScreen = () => {
             </div>
           </div>
           <div className={styles.hm__middle}>
-            {JSON.stringify(selectedI) !== "{}" ? <Items /> : null}
+            <Items />
           </div>
           <div className={styles.hm__aside_right}>
             <div className={styles.bag__title}>

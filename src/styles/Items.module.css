@@ -89,4 +89,9 @@
     border-radius: 5px;
     width: 50px;
   }
+
+  .product__name {
+    margin-left: 0.3rem;
+    width: 80%;
+  }
 }
