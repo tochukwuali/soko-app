@@ -1,12 +1,12 @@
 import { useReducer, createContext } from "react";
 import { productReducer } from "./reducers/productReducer";
-import PRODUCTS, { Users } from "./data";
+import PRODUCTS, { Users, Cart } from "./data";
 
 const initialState = {
   products: PRODUCTS,
   users: Users,
   selectedI: {},
-  cartItems: [],
+  cartItems: Cart,
 };
 
 export const ProductContext = createContext(initialState);
@@ -14,13 +14,20 @@ export const ProductContext = createContext(initialState);
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productReducer, initialState);
 
-  function selectCategory(id) {
+  const selectCategory = (id) => {
     dispatch({
       type: "SELECT_CATEGORY",
       payload: id,
     });
-  }
-  console.log(state.selectedI);
+  };
+
+  // const addToCart = (item) => {
+  //   dispatch({
+  //     type: "ADD_TO_CART",
+  //     payload: item,
+  //   });
+  // };
+
   // let Category = [...products];
   // let selectedCat = Category.find((category) => category.id === id);
   // return selectedCat;
@@ -30,6 +37,7 @@ export const ProductsProvider = ({ children }) => {
       value={{
         products: state.products,
         users: state.users,
+        cartItems: state.cartItems,
         selectedI: state.selectedI,
         selectCategory,
       }}

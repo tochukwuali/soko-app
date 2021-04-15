@@ -1,0 +1,26 @@
+.success_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 70vh;
+  width: 100%;
+}
+
+.success_header {
+  margin-top: 1.8rem;
+}
+
+.success_body p {
+    font-size: 0.9rem;
+}
+
+.success_action_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.8rem;
+}
+
+.success_content {
+ text-align: center;
+}

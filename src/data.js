@@ -387,6 +387,19 @@ export const Users = [
     country: "Uganda",
     street: "Plot 12 Nkrumah Road",
     city: "Kampala",
-    telephone: "+256766334574"
+    telephone: "+256766334574",
+  },
+];
+
+export const Cart = [
+  {
+    name: "Earrings and Mangtikka",
+    amount: 118000,
+    qty: 1,
+  },
+  {
+    name: "Colourful Earrings Jhumkki",
+    amount: "25000",
+    qty: 5,
   },
 ];

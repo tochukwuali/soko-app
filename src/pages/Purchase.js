@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
 import EnterPhoneNumber from "../components/EnterPhoneNumber";
 import { CheckIcon, PlusIcon } from "../components/shared/Icons";
-import { Link } from "react-router-dom";
 import styles from "../styles/purchase.module.css";
+import QtyToggle from "../components/shared/QtyToggle/QtyToggle";
 import {
   UnstyledLine,
   UnstyledCircle,
@@ -18,6 +18,13 @@ import {
   IconBg,
   WhiteBgButton,
   YellowBgButton,
+  Count,
+  H4,
+  P,
+  Price,
+  PSmall,
+  HorizontalLine,
+  DottedLine,
 } from "../components/shared/StyledDiv";
 
 import { ProductContext } from "../GlobalState";
@@ -51,7 +58,7 @@ const Purchase = () => {
     setTimeout(() => {
       setStart2(false);
       setChangeA(true);
-    }, 5000);
+    }, 3000);
   };
 
   const handleAddressClick = () => {
@@ -62,7 +69,12 @@ const Purchase = () => {
     setStart3(true);
   };
 
-  const { users } = useContext(ProductContext);
+  const handlePurchase = ({ history }) => {
+    setComplete3(true);
+    history.push("/purchase/success");
+  };
+
+  const { users, cartItems } = useContext(ProductContext);
   return (
     <div className={styles.purchase_container}>
       <div className={styles.purchase_content}>
@@ -182,7 +194,7 @@ const Purchase = () => {
                   {complete3 ? <CheckIcon size={"1.3em"} /> : "3"}
                 </StyledCircle>
               ) : (
-                <UnstyledCircle>2</UnstyledCircle>
+                <UnstyledCircle>3</UnstyledCircle>
               )}
 
               <div>
@@ -199,11 +211,13 @@ const Purchase = () => {
                           Cash on delivery
                         </span>
                       </div>
-                      <Link to="/purchase/success">
-                        <YellowBgButton style={{ marginBottom: "0.8rem" }}>
-                          Place order
-                        </YellowBgButton>
-                      </Link>
+
+                      <YellowBgButton
+                        style={{ marginBottom: "0.8rem" }}
+                        onClick={handlePurchase}
+                      >
+                        Place order
+                      </YellowBgButton>
                     </div>
                   ) : null}
                 </div>
@@ -213,31 +227,61 @@ const Purchase = () => {
         </div>
         <div className={styles.purchase_items}>
           <div className={styles.purchase_items_content}>
-            <div className={styles.purchase_item_name}>
-              <h4> Bag </h4>
+            <div className={styles.purchase_item_header}>
+              <div className={styles.purchase_item_title}>
+                <h4> Bag </h4>
+                <Count>
+                  <span>{0}</span>
+                </Count>
+              </div>
             </div>
             <div className={styles.purchase_item_qty}>
               <small>Clear Bag</small>
             </div>
           </div>
+          <div className={styles.purchase_item_body}>
+            {cartItems.map((citem, i) => (
+              <div key={i} className={styles.purchase_item}>
+                <div>
+                  <P>{citem.name}</P>
+                  <small>Per piece</small>
+                  <Price style={{ marginTop: "10px" }}>
+                    UGX {citem.amount}
+                  </Price>
+                </div>
+                <div>
+                  <P> </P>
+                  <QtyToggle value={citem.qty} />
+                </div>
+              </div>
+            ))}
+          </div>
+          <HorizontalLine></HorizontalLine>
           <div className={styles.purchase_items_summary}>
             <div>
-              <p>Subtotal</p>
-              <p>Delivery</p>
+              <PSmall>Subtotal</PSmall>
+              <PSmall>Delivery</PSmall>
             </div>
             <div>
-              <p>UGX </p>
+              <PSmall>UGX </PSmall>
+              <small style={{ color: "#2cdb60", fontWeight: "500" }}>
+                Free
+              </small>
             </div>
           </div>
+          <DottedLine></DottedLine>
           <div className={styles.purchase_items_total}>
             <div>
-              <h5>Total</h5>
-              <h5>Amount</h5>
+              <H4>Total</H4>
+              <H4>Amount</H4>
             </div>
             <small>inclusive of all taxes</small>
             <br></br>
-            <small>You're about to save UGX... on this order</small>
           </div>
+          <DottedLine></DottedLine>
+          <small style={{ color: "#2cdb60", fontWeight: "500" }}>
+            You're about to save UGX... on this order
+          </small>
         </div>
       </div>
     </div>

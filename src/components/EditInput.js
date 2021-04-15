@@ -2,16 +2,16 @@ import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import styles from "../styles/Account.module.css";
 
-const EditInput = (props) => {
-  const [name, setName] = useState("");
-  const [mnumber, setMNumber] = useState("");
-  const [city, setCity] = useState("");
-  const [address, setAddress] = useState("");
+const EditInput = ({ user, handleEditClose, editShow }) => {
+  const [name, setName] = useState(user.name);
+  const [mnumber, setMNumber] = useState(user.telephone);
+  const [city, setCity] = useState(user.city);
+  const [street, setStreet] = useState(user.street);
   return (
     <div className={styles.address_input_container}>
       <Modal
-        show={props.editShow}
-        onHide={props.handleEditClose}
+        show={editShow}
+        onHide={handleEditClose}
         style={{ marginTop: "5rem" }}
       >
         <Modal.Header closeButton style={{ padding: "6px 8px" }}>
@@ -25,7 +25,7 @@ const EditInput = (props) => {
               </label>
               <input
                 type="text"
-                value={props.user.name}
+                value={name}
                 id="name"
                 className={styles.form_input}
                 placeholder="e.g John Doe"
@@ -40,7 +40,7 @@ const EditInput = (props) => {
               </label>
               <input
                 type="tel"
-                value={props.user.telephone}
+                value={mnumber}
                 id="mobile-number"
                 className={styles.form_input}
                 placeholder="Enter mobile number"
@@ -54,7 +54,7 @@ const EditInput = (props) => {
               </label>
               <input
                 type="text"
-                value={props.user.city}
+                value={city}
                 id="city"
                 className={styles.form_input}
                 placeholder="e.g Kampala"
@@ -72,8 +72,8 @@ const EditInput = (props) => {
                 cols="30"
                 rows="4"
                 className={styles.formInput_textArea}
-                value={props.user.street}
-                onChange={(e) => setAddress(e.target.value)}
+                value={street}
+                onChange={(e) => setStreet(e.target.value)}
                 placeholder="E.g Kalema Apartments, Plot 00 Johnson Road, Room 24B"
               />
             </div>

@@ -21,6 +21,14 @@ const Account = () => {
   const [show, setShow] = useState(false);
   const [editShow, setEditShow] = useState(false);
 
+  const handleOrderStyle = () => {
+    setMyOrder(true);
+  };
+
+  const handleAddressStyle = () => {
+    setMyOrder(false);
+  };
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -32,16 +40,13 @@ const Account = () => {
       <div className={styles.account_content}>
         <div className={styles.account_nav_container}>
           <div className={styles.account_nav}>
-            <div
-              className={styles.account_nav_item}
-              onClick={() => setMyOrder(true)}
-            >
+            <div className={styles.account_nav_item} onClick={handleOrderStyle}>
               <FileIcon />
               My Order
             </div>
             <div
               className={styles.account_nav_item}
-              onClick={() => setMyOrder(false)}
+              onClick={handleAddressStyle}
             >
               <LocationIcon />
               My Addresses
@@ -130,8 +135,8 @@ const Account = () => {
                 onClick={handleShow}
               >
                 <FiPlus /> Add New Address
-                <AddressInput handleClose={handleClose} show={show} />
               </div>
+              <AddressInput handleClose={handleClose} show={show} />
             </div>
           )}
         </div>

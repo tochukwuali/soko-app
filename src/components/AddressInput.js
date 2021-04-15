@@ -15,7 +15,7 @@ const AddressInput = (props) => {
         style={{ marginTop: "5rem" }}
       >
         <Modal.Header closeButton style={{ padding: "6px 8px" }}>
-          <h4>Edit Address</h4>
+          <h4>Enter Address</h4>
         </Modal.Header>
         <Modal.Body>
           <Form>

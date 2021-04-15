@@ -91,9 +91,39 @@ export const UserAddress = styled.p`
   line-height: 1.2;
 `;
 
+export const P = styled.p`
+  font-size: 0.9rem;
+  margin-bottom: -4px;
+  color: black;
+`;
+
+export const Price = styled.p`
+  font-size: 0.9rem;
+  margin-top: 4px;
+`;
+
+export const PSmall = styled.p`
+  font-size: 0.85rem;
+  padding-bottom: -8px;
+`;
+
 export const UserNumber = styled.span`
   font-size: 0.8rem;
   font-weight: 500;
+`;
+
+export const HorizontalLine = styled.div`
+  border-top: 1px solid #afadad;
+  width: 100%;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
+`;
+
+export const DottedLine = styled.div`
+  border-top: 1px dashed #afadad;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const IconBg = styled.div`
@@ -134,4 +164,44 @@ export const WhiteBgButton = styled.button`
   font-size: 0.9rem;
   font-weight: 500;
   margin-left: 0.8rem;
+`;
+
+export const YellowBtn = styled.button`
+  background: #f3d632;
+  color: #2666cc;
+  width: 180px;
+  border: 1px solid #f3d632;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 1rem;
+`;
+
+export const WhiteBtn = styled.button`
+  background: #fff;
+  color: #2666ee;
+  width: 130px;
+  border: 1px solid #2666ee;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 0.8rem;
+`;
+
+export const Count = styled.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: #2666cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0 5px;
+  margin-left: 10px;
+  margin-top: 0;
 `;

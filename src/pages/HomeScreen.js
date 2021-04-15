@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import styles from "../styles/HomeScreen.module.css";
-// import { products } from "../data";
 import { IconContext } from "react-icons";
 import { FiChevronRight, FiSearch } from "react-icons/fi";
 import { IoSadOutline } from "react-icons/io5";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Items from "./Items";
+import { Count } from "../components/shared/StyledDiv";
 
 import { ProductContext } from "../GlobalState";
 
@@ -69,9 +69,9 @@ const HomeScreen = () => {
           <div className={styles.hm__aside_right}>
             <div className={styles.bag__title}>
               <h4>Bag</h4>
-              <div className={styles.category__count}>
+              <Count>
                 <span>0</span>
-              </div>
+              </Count>
             </div>
             <div className={styles.sadface__icon}>
               <IconContext.Provider

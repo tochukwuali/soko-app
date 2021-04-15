@@ -35,6 +35,14 @@
 display: flex;
 } 
 
+ .purchase_payment {
+   margin-top: 5px;
+ }
+
+ .purchase_address_order {
+   margin-top: 1px;
+ }
+
 .purchase_account h3 {
   padding-bottom: 0.4rem;
 }
@@ -55,7 +63,7 @@ display: flex;
   padding: 8px;
   border: 1px solid rgb(189, 191, 196);
   border-radius: 5px;
-  width: 70%;
+  width: 65%;
 }
 
 .purchase_buyer_input div {
@@ -70,10 +78,40 @@ display: flex;
 .purchase_items {
     padding: 2rem;
     border-left: 1px solid #afadad;
+    height: 100vh;
+    width: 35%;
+}
+
+.purchase_item_title {
+  display: flex;
 }
 
 .purchase_items_content {
    display: flex; 
+   justify-content: space-between;
+}
+
+.purchase_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+}
+
+.purchase_item>div:last-child {
+  margin-top: 3rem;
+}
+
+.purchase_item_body {
+  padding: 1rem 0;
+}
+
+.purchase_items_total div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purchase_items_summary {
+   display: flex;
    justify-content: space-between;
 }
 

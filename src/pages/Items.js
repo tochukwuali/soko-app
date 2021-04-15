@@ -3,6 +3,8 @@ import styles from "../styles/Items.module.css";
 import { Link } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import { Count } from "../components/shared/StyledDiv";
+
 import { ProductContext } from "../GlobalState";
 
 const Items = () => {
@@ -12,9 +14,9 @@ const Items = () => {
     <div>
       <div className={styles.hm__middle_header}>
         <h4>{selectedI.category}</h4>
-        <div className={styles.category__count}>
+        <Count>
           <span>{selectedI.count}</span>
-        </div>
+        </Count>
       </div>
 
       {sproducts.map((item) => (
