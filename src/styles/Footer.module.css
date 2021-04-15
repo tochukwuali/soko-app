@@ -56,5 +56,6 @@
   .footer__btn {
     display: flex;
     margin-top: 1.2rem;
+    justify-content: flex-start;
   }
 }
