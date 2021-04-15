@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import styles from "../styles/Account.module.css";
 
-const AddressInput = (props) => {
+const EditInput = (props) => {
   const [name, setName] = useState("");
   const [mnumber, setMNumber] = useState("");
   const [city, setCity] = useState("");
@@ -10,8 +10,8 @@ const AddressInput = (props) => {
   return (
     <div className={styles.address_input_container}>
       <Modal
-        show={props.show}
-        onHide={props.handleClose}
+        show={props.editShow}
+        onHide={props.handleEditClose}
         style={{ marginTop: "5rem" }}
       >
         <Modal.Header closeButton style={{ padding: "6px 8px" }}>
@@ -25,7 +25,7 @@ const AddressInput = (props) => {
               </label>
               <input
                 type="text"
-                value={name}
+                value={props.user.name}
                 id="name"
                 className={styles.form_input}
                 placeholder="e.g John Doe"
@@ -40,7 +40,7 @@ const AddressInput = (props) => {
               </label>
               <input
                 type="tel"
-                value={mnumber}
+                value={props.user.telephone}
                 id="mobile-number"
                 className={styles.form_input}
                 placeholder="Enter mobile number"
@@ -54,7 +54,7 @@ const AddressInput = (props) => {
               </label>
               <input
                 type="text"
-                value={city}
+                value={props.user.city}
                 id="city"
                 className={styles.form_input}
                 placeholder="e.g Kampala"
@@ -72,7 +72,7 @@ const AddressInput = (props) => {
                 cols="30"
                 rows="4"
                 className={styles.formInput_textArea}
-                value={address}
+                value={props.user.street}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="E.g Kalema Apartments, Plot 00 Johnson Road, Room 24B"
               />
@@ -85,16 +85,20 @@ const AddressInput = (props) => {
             display: "flex",
             justifyContent: "center",
             border: "none",
-            marginTop: "1rem",
+            marginTop: "-1rem",
           }}
         >
           <Button
             style={{
-              background: "#cac9c9",
-              border: "1px solid #cac9c9",
+              color: "#2666ee",
+              fontWeight: "600",
+              fontSize: "0.9rem",
+              background: "#f3d632",
+              border: "1px solid #f3d632",
+              padding: "8px 22px",
             }}
           >
-            Add Address
+            Edit Address
           </Button>
         </Modal.Footer>
       </Modal>
@@ -102,4 +106,4 @@ const AddressInput = (props) => {
   );
 };
 
-export default AddressInput;
+export default EditInput;

@@ -45,7 +45,7 @@ width: 50%;
   opacity: .75;
   color: #2666cc;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 2px;
   position: absolute;
   top: 0;
   left: 0;
@@ -95,10 +95,16 @@ width: 50%;
 .details_price p {
   font-size: 1.2rem;
   color: #000;
+  margin-top: -1.2rem;
+}
+
+.details_price {
+   margin-top: -1.5rem;
 }
 
 .details_toggle {
   padding: 1rem 0;
+  margin-top: -1.2rem;
 }
 
 .details_btngroup {
@@ -107,7 +113,7 @@ width: 50%;
 }
 
 .details_btngroup button:first-child {
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   background: transparent;
   color: #2666cc;
   width: 30%;
@@ -120,7 +126,7 @@ width: 50%;
 }
 
 .details_buy_btn {
-    margin-top: 1.2rem;
+    /* margin-top: 1.2rem; */
     background: #f3d632;
    
     width: 30%;

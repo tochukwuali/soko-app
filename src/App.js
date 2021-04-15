@@ -9,6 +9,7 @@ import Bag from "./pages/Bag";
 import { ProductsProvider } from "./GlobalState";
 import Purchase from "./pages/Purchase";
 import Account from "./pages/Account";
+import SuccessPurchase from "./pages/SuccessPurchase";
 
 function App() {
   // const initialCart = {
@@ -49,8 +50,9 @@ function App() {
             <Route path="/" exact component={HomeScreen} />
             <Route path="/item/:id" component={ItemDetails} />
             <Route path="/bag" component={Bag} />
-            <Route path="/purchase" component={Purchase} />
+            <Route exact path="/purchase" component={Purchase} />
             <Route path="/account" component={Account} />
+            <Route exact path="/purchase/success" component={SuccessPurchase} />
           </main>
         </Switch>
       </div>

@@ -387,5 +387,6 @@ export const Users = [
     country: "Uganda",
     street: "Plot 12 Nkrumah Road",
     city: "Kampala",
+    telephone: "+256766334574"
   },
 ];

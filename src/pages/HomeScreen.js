@@ -77,7 +77,7 @@ const HomeScreen = () => {
               <IconContext.Provider
                 value={{
                   size: "8em",
-                  color: "#2666cc",
+                  color: "#6e6e6e",
                 }}
               >
                 <IoSadOutline />
