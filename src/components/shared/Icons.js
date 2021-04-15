@@ -132,3 +132,19 @@ export const PlusIcon = () => {
     </div>
   );
 };
+
+export const AddIcon = () => {
+  return (
+    <div>
+      <IconContext.Provider
+        value={{
+          size: "1.5em",
+          color: "#2666cc",
+          style: { paddingRight: "4px" },
+        }}
+      >
+        <FiPlus />
+      </IconContext.Provider>
+    </div>
+  );
+};

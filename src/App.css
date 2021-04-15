@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 * {
@@ -23,14 +23,14 @@ input[name="input1"] {
 }
 
 input[name="input2"] {
-color: #000;
-border:1px solid transparent;
-background: #f3f3f3;
+  color: #000;
+  border: 1px solid transparent;
+  background: #f3f3f3;
 }
 
 input[name="input3"] {
   color: #000;
-  border:1px solid transparent;
+  border: 1px solid transparent;
   background: #f3f3f3;
 }
 
@@ -43,7 +43,7 @@ h3 {
 }
 
 p {
-  color: #6e6e6e
+  color: #3b3b3b;
 }
 
 .hd {
@@ -66,10 +66,14 @@ p {
 
 .hd__title h4 span {
   font-weight: 600;
-
 }
 
 /* .app__container {
   padding: 0 8rem;
 } */
 
+@media (max-width: 700px) {
+  .hd {
+    display: none;
+  }
+}

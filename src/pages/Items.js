@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import styles from "../styles/Items.module.css";
 import { Link } from "react-router-dom";
-import { FiPlus } from "react-icons/fi";
-import { IconContext } from "react-icons";
 import { Count } from "../components/shared/StyledDiv";
 
 import { ProductContext } from "../GlobalState";
+import { AddIcon } from "../components/shared/Icons";
 
 const Items = () => {
   const { selectedI } = useContext(ProductContext);
@@ -31,15 +30,7 @@ const Items = () => {
           <Link to={`/item/${item.item_id}`} style={{ textDecoration: "none" }}>
             <div className={styles.add__btn}>
               <button>
-                <IconContext.Provider
-                  value={{
-                    size: "1.5em",
-                    color: "#2666cc",
-                    style: { paddingRight: "4px" },
-                  }}
-                >
-                  <FiPlus />
-                </IconContext.Provider>
+                <AddIcon />
                 Add
               </button>
             </div>

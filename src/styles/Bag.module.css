@@ -1,30 +1,33 @@
-.bag_container{
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding: 5rem 0;
- text-align: center;
+.bag_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  text-align: center;
 }
 
 .bag_body {
- padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 .bag_body p {
-    padding: 1rem 0;
-    font-size: 0.9rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 }
 
 .bag_body button {
-   margin-top: 1.2rem;
-   background: #f3d632;
-   color: #2666cc;
-   width: 90%;
-   border: 1px solid #f3d632;
-   border-radius: 5px;
-   cursor: pointer;
-   padding: 10px 18px;
-   font-size: 0.95rem;
-   font-weight: 600;
+  margin-top: 1.2rem;
+  background: #f3d632;
+  color: #2666cc;
+  width: 90%;
+  border: 1px solid #f3d632;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
 }

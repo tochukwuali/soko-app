@@ -1,4 +1,3 @@
-
 .hm__content {
   display: flex;
   justify-content: space-between;
@@ -24,7 +23,6 @@
 
 .hm__viewall_link {
   margin-top: 0.7rem;
-  
 }
 
 .hm__viewall_link h4 {
@@ -33,24 +31,32 @@
 
 .hm__middle {
   width: 60%;
-  padding: 0rem 2rem;
-  padding-bottom: 1rem;
-   color: #6e6e6e;
-   border-right: 1px solid #8a8b8ba1;
-   border-left: 1px solid #8a8b8ba1;
+
+  padding: 2rem 2rem 1rem 2rem;
+  color: #6e6e6e;
+  margin-top: -1.7rem;
+  border-right: 1px solid #8a8b8ba1;
+  border-left: 1px solid #8a8b8ba1;
+}
+
+.hm__search_flex {
+  display: flex;
+  justify-content: center;
 }
 
 .hm__search_bar {
   /* position: relative; */
   margin-top: -1.2rem;
-  width: 100%;
+  width: 40%;
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .search__input {
   border-radius: 5px 0 0 5px;
   background: #e9e9e9;
-  padding: 10px 8px;
+  padding: 10px;
   border: 1px solid #e9e9e9;
   width: 92%;
 }
@@ -65,9 +71,8 @@
 }
 
 ::placeholder {
-  font-family: 'Rubik' sans-serif;
+  font-family: "Rubik" sans-serif;
 }
-
 
 .hm__aside_right {
   width: 25%;
@@ -75,17 +80,17 @@
 }
 
 .category__count {
-   width: 25px;
-   height: 25px;
-   border-radius: 5px;
-   background: #2666cc;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: #fff;
-   padding: 0 5px;
-   margin-left: 10px;
-   margin-top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: #2666cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0 5px;
+  margin-left: 10px;
+  margin-top: 0;
 }
 
 .hm__aside_right .bag__title {
@@ -106,11 +111,56 @@
 }
 
 .bag__body {
- text-align: center;
- margin-left: 2rem;
+  text-align: center;
+  margin-left: 2rem;
 }
 
-.bag__body p{
+.bag__body p {
   font-size: 0.9rem;
   margin-top: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .hm__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .hm__search_flex {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hm__search_bar {
+    /* position: relative; */
+    margin-top: -1.2rem;
+    width: 100%;
+    display: flex;
+  }
+
+  .search__input {
+    padding: 7px 10px;
+    width: 80%;
+  }
+  .search__btn {
+    width: 12%;
+  }
+
+  .hm__middle {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .hm__aside_left {
+    width: 100%;
+    display: flex;
+  }
+  .hm__aside_right {
+    display: none;
+  }
 }

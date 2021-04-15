@@ -1,5 +1,5 @@
 .account_container {
-    padding: 2rem 10rem;
+  padding: 2rem 10rem;
 }
 
 .account_content {
@@ -11,9 +11,9 @@
 }
 
 .account_nav_container {
-   border-right: 1px solid #c9c9c9;
-   padding: 2rem;
-   width: 35%;
+  border-right: 1px solid #c9c9c9;
+  padding: 2rem;
+  width: 35%;
 }
 
 .account_nav_item {
@@ -32,8 +32,8 @@
   justify-content: space-between;
 }
 
-.account_order_header div{
-  border: .16rem solid #afaeae;
+.account_order_header div {
+  border: 0.16rem solid #afaeae;
   border-radius: 5px;
   padding: 2px 8px;
   width: 6rem;
@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-.account_order h4{
+.account_order h4 {
   margin-bottom: 30px;
 }
 
@@ -74,8 +74,7 @@
   font-weight: 600;
 }
 
-
-.account_order_card>div small:last-child {
+.account_order_card > div small:last-child {
   font-size: 0.7rem;
 }
 
@@ -83,7 +82,7 @@
   margin-left: 1rem;
 }
 
-.account_address_cards  {
+.account_address_cards {
   display: flex;
 }
 
@@ -95,11 +94,11 @@
 }
 
 .account_address_card_content {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .account_address_card_content h4 {
-    color: #222222;
+  color: #222222;
 }
 
 .account_address_card_content p {
@@ -108,17 +107,17 @@
 }
 
 .acount_new_address_card {
-   border: 1px solid #cecece;
-   border-radius: 8px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 220px;
-   height: 150px;
-   color: #2666ee;
-   font-size: 0.9rem;
-   margin-left: 1rem;
-   cursor: pointer;
+  border: 1px solid #cecece;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 150px;
+  color: #2666ee;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  cursor: pointer;
 }
 
 .account_address_card_action {
@@ -134,11 +133,11 @@
 }
 
 .account_address_card_action p:last-child {
- color: rgb(212, 81, 81);
+  color: rgb(212, 81, 81);
 }
 
 .account_address_card_action p:first-child {
-    color: #222222;
+  color: #222222;
 }
 
 .address_input_container {
@@ -148,40 +147,46 @@
 }
 
 .input_label {
-    letter-spacing: 0px;
-    opacity: 1;
-    flex: 1 1 0%;
-    display: flex;
-    font-size: 0.8rem;
-    margin-left: 0.15rem;
-    margin-bottom: 0.2rem;
-    color: rgb(59, 56, 56);
+  letter-spacing: 0px;
+  opacity: 1;
+  flex: 1 1 0%;
+  display: flex;
+  font-size: 0.8rem;
+  margin-left: 0.15rem;
+  margin-bottom: 0.2rem;
+  color: rgb(59, 56, 56);
 }
 
 .form_item {
-    width: 100%;
-    padding: 0.5rem 0;
-    margin-bottom: 5px;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 5px;
 }
 
 .form_input {
-    width: 100%;
-    border-radius: 3px;
-    line-height: 1.5;
-    padding: 0px 1rem;
-    margin: 0px auto;
-    font-size: 0.75rem;
-    box-sizing: border-box;
-    height: 40px;
-    background-color: #edf2f7;
-    border: 0 solid #e2e8f0;
+  width: 100%;
+  border-radius: 3px;
+  line-height: 1.5;
+  padding: 0px 1rem;
+  margin: 0px auto;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+  height: 40px;
+  background-color: #edf2f7;
+  border: 0 solid #e2e8f0;
 }
 
-   .formInput_textArea {
-      padding: 10px;
-      border: 0.5px solid rgba(150, 150, 150, 0.15);
-      width: 100%;
-      font-size: 0.8rem;
-      border-radius: 3px;
-      line-height: 1.5;
-    }
+.formInput_textArea {
+  padding: 10px;
+  border: 0.5px solid rgba(150, 150, 150, 0.15);
+  width: 100%;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .account_container {
+    padding: 2rem 1rem;
+  }
+}

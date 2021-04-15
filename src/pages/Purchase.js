@@ -29,7 +29,7 @@ import {
 
 import { ProductContext } from "../GlobalState";
 
-const Purchase = () => {
+const Purchase = ({ history }) => {
   const [pin, setPin] = useState("");
   const [edit, setEdit] = useState(false);
 
@@ -69,7 +69,7 @@ const Purchase = () => {
     setStart3(true);
   };
 
-  const handlePurchase = ({ history }) => {
+  const handlePurchase = () => {
     setComplete3(true);
     history.push("/purchase/success");
   };

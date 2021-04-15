@@ -15,6 +15,28 @@ const HomeScreen = () => {
   return (
     <div>
       <div className={styles.hm__container}>
+        <div className={styles.hm__search_flex}>
+          <div className={styles.hm__search_bar}>
+            <input
+              type="text"
+              placeholder="Search For Products..."
+              className={styles.search__input}
+            />
+            <button className={styles.search__btn}>
+              <IconContext.Provider
+                value={{
+                  size: "1.3em",
+                  color: "#2666cc",
+                  style: {
+                    verticalAlign: "middle",
+                  },
+                }}
+              >
+                <FiSearch />
+              </IconContext.Provider>
+            </button>
+          </div>
+        </div>
         <div className={styles.hm__content}>
           <div className={styles.hm__aside_left}>
             {products.map((product) => (
@@ -43,27 +65,6 @@ const HomeScreen = () => {
             </div>
           </div>
           <div className={styles.hm__middle}>
-            <div className={styles.hm__search_bar}>
-              <input
-                type="text"
-                placeholder="Search For Products..."
-                className={styles.search__input}
-              />
-              <button className={styles.search__btn}>
-                <IconContext.Provider
-                  value={{
-                    size: "1.3em",
-                    color: "#2666cc",
-                    style: {
-                      verticalAlign: "middle",
-                    },
-                  }}
-                >
-                  <FiSearch />
-                </IconContext.Provider>
-              </button>
-            </div>
-
             {JSON.stringify(selectedI) !== "{}" ? <Items /> : null}
           </div>
           <div className={styles.hm__aside_right}>

@@ -1,72 +1,92 @@
 .hm__middle_header {
-    display: flex;
-    width: 30%;
-    margin-top: 10px;
+  display: flex;
+  width: 30%;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .category__count {
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    background: #2666cc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding: 0 5px;
-    margin-left: 10px;
-    margin-top: -3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: #2666cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0 5px;
+  margin-left: 10px;
+  margin-top: -3px;
 }
 
 .product__image {
-    width: 20%;
+  width: 20%;
 }
 
 .product__image img {
-    border-radius: 5px;
-    width: 70px;
+  border-radius: 5px;
+  width: 70px;
 }
 
 .product__details {
-    display: flex;
-    justify-content: stretch;
-    padding: 0.6rem 0;
-    margin-top: 0.8rem;
+  display: flex;
+  justify-content: stretch;
+  padding: 0.6rem 0;
+  margin-top: 0;
 }
 
 .product__name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: -0.2rem;
-    width: 80%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -0.2rem;
+  width: 80%;
 }
 
 .product__name p {
-    font-size: 0.9rem;
-    line-height: 2;
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 .product__name p:nth-child(1) {
-    color: black;
+  color: black;
 }
 
 .add__btn {
-    align-self: flex-end;
-    justify-self: flex-end;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .add__btn button {
-    border-radius: 3px;
-    border: 1.95px solid #2666cc;
-    color: #2666cc;
-    padding: 2px 8px;
-    background: #fff;
-    font-weight: 600;
+  border-radius: 3px;
+  border: 1.95px solid #2666cc;
+  color: #2666cc;
+  padding: 1px 5px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 700px) {
+  .hm__middle_header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .product__image {
+    width: 20%;
+  }
+
+  .product__image img {
+    border-radius: 5px;
+    width: 50px;
+  }
 }
