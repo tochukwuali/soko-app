@@ -4,6 +4,8 @@ import {
   FiPlus,
   FiSearch,
   FiChevronRight,
+  FiHome,
+  FiShoppingBag,
 } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import {
@@ -11,6 +13,7 @@ import {
   IoLocationOutline,
   IoStorefrontOutline,
   IoSadOutline,
+  IoGridOutline,
 } from "react-icons/io5";
 import { BsFileText } from "react-icons/bs";
 import { GiPlainCircle } from "react-icons/gi";
@@ -193,6 +196,45 @@ export const SadFaceIcon = () => {
       }}
     >
       <IoSadOutline />
+    </IconContext.Provider>
+  );
+};
+
+export const GridIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "1.3em",
+        color: "#6e6e6e",
+      }}
+    >
+      <IoGridOutline />
+    </IconContext.Provider>
+  );
+};
+
+export const HomeIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "1.3em",
+        color: "#6e6e6e",
+      }}
+    >
+      <FiHome />
+    </IconContext.Provider>
+  );
+};
+
+export const BagIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "1.3em",
+        color: "#6e6e6e",
+      }}
+    >
+      <FiShoppingBag />
     </IconContext.Provider>
   );
 };
