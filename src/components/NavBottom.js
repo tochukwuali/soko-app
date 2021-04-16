@@ -5,23 +5,28 @@ import {
   GridIcon,
   FileIcon,
 } from "../components/shared/Icons";
+import { NavLink } from "react-router-dom";
 
 const NavItems = [
   {
     icon: <HomeIcon />,
     title: "Home",
+    path: "/",
   },
   {
     icon: <GridIcon />,
     title: "Category",
+    path: "/items",
   },
   {
     icon: <BagIcon />,
     title: "Bag",
+    path: "/purchase",
   },
   {
     icon: <FileIcon />,
     title: "Orders",
+    path: "/orders",
   },
 ];
 
@@ -31,8 +36,16 @@ const NavBottom = () => {
       <div className={styles.nav_bottom_flex}>
         {NavItems.map((item, i) => (
           <div key={i} className={styles.nav_bottom_item}>
-            <div>{item.icon}</div>
-            <small>{item.title}</small>
+            <NavLink
+              to={item.path}
+              // activeStyle={{
+              //   fontWeight: "bold",
+              //   color: "#2666ee",
+              // }}
+            >
+              <div>{item.icon}</div>
+              <small>{item.title}</small>
+            </NavLink>
           </div>
         ))}
       </div>
