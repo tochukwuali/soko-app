@@ -9,6 +9,10 @@
   padding: 0 5rem;
 }
 
+/* .bottom_navbar {
+  display: none;
+} */
+
 .navbar__left {
   display: flex;
   margin-bottom: 0.4rem;
@@ -67,14 +71,12 @@
     padding: 0;
   }
 
-  .bottom_navbar {
-    position: fixed;
-    bottom: 0;
+  /* .phantom {
+    display: block;
+    padding: 20px;
+    height: 60px;
     width: 100%;
-  }
-  .bottom_navbar div {
-    background: yellow;
-  }
+  } */
 
   .navbar__right {
     display: none;

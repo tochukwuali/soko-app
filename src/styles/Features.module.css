@@ -35,8 +35,8 @@
 }
 
 @media (max-width: 700px) {
-  .ft_container {
-    padding: 1rem;
+  .ft__container {
+    padding: 0;
   }
   .ft__svg {
     padding: 0 2rem;

@@ -1,9 +1,16 @@
-import { FiCheck, FiTarget, FiPlus } from "react-icons/fi";
+import {
+  FiCheck,
+  FiTarget,
+  FiPlus,
+  FiSearch,
+  FiChevronRight,
+} from "react-icons/fi";
 import { IconContext } from "react-icons";
 import {
   IoFilterCircleOutline,
   IoLocationOutline,
   IoStorefrontOutline,
+  IoSadOutline,
 } from "react-icons/io5";
 import { BsFileText } from "react-icons/bs";
 import { GiPlainCircle } from "react-icons/gi";
@@ -119,32 +126,73 @@ export const TargetIcon = () => {
 
 export const PlusIcon = () => {
   return (
-    <div>
-      <IconContext.Provider
-        value={{
-          size: "1.2em",
-          color: "#2666ee",
-          style: { verticalAlign: "middle" },
-        }}
-      >
-        <FiPlus />
-      </IconContext.Provider>
-    </div>
+    <IconContext.Provider
+      value={{
+        size: "1.2em",
+        color: "#2666ee",
+        style: { verticalAlign: "middle" },
+      }}
+    >
+      <FiPlus />
+    </IconContext.Provider>
   );
 };
 
 export const AddIcon = () => {
   return (
-    <div>
-      <IconContext.Provider
-        value={{
-          size: "1.5em",
-          color: "#2666cc",
-          style: { paddingRight: "4px" },
-        }}
-      >
-        <FiPlus />
-      </IconContext.Provider>
-    </div>
+    <IconContext.Provider
+      value={{
+        size: "1.5em",
+        color: "#2666cc",
+        style: { paddingRight: "4px" },
+      }}
+    >
+      <FiPlus />
+    </IconContext.Provider>
+  );
+};
+
+export const RightIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "1.2em",
+        color: "#2666cc",
+        style: { verticalAlign: "middle" },
+      }}
+    >
+      <h4>
+        View all Categories <FiChevronRight />
+      </h4>
+    </IconContext.Provider>
+  );
+};
+
+export const SearchIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "1.3em",
+        color: "#2666cc",
+        style: {
+          verticalAlign: "middle",
+        },
+      }}
+    >
+      <FiSearch />
+    </IconContext.Provider>
+  );
+};
+
+export const SadFaceIcon = () => {
+  return (
+    <IconContext.Provider
+      value={{
+        size: "8em",
+        color: "#6e6e6e",
+      }}
+    >
+      <IoSadOutline />
+    </IconContext.Provider>
   );
 };

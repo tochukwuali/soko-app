@@ -8,22 +8,40 @@ import QtyToggle from "../components/shared/QtyToggle/QtyToggle";
 import { Link } from "react-router-dom";
 
 const ItemDetails = ({ match }) => {
-  const dotStyle = {
-    bottom: "-25px",
-    width: "100%",
-    margin: 0,
-    listStyle: "none",
-    textAlign: "center",
-    postion: "absolute",
-  };
-
   const secondSettings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     arrows: false,
     speed: 500,
     slidesToShow: 7,
-    slidesToScroll: 1,
+    slidesToScroll: 7,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const firstSettings = {
@@ -33,24 +51,32 @@ const ItemDetails = ({ match }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    appendDots: () => (
-      <div style={dotStyle}>
-        <ul>
-          <li className={styles.list_style}>
-            <button></button>
-          </li>
-          <li className={styles.list_style}>
-            <button></button>
-          </li>
-          <li className={styles.list_style}>
-            <button></button>
-          </li>
-          <li className={styles.list_style}>
-            <button></button>
-          </li>
-        </ul>
-      </div>
-    ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const { selectedI, products } = useContext(ProductContext);
@@ -114,39 +140,13 @@ const ItemDetails = ({ match }) => {
         <div className={styles.details_rproducts}>
           <p>RELATED PRODUCTS</p>
           <div className={styles.details_rproducts_carousel}>
-            <Slider {...secondSettings} style={{ width: "100vw" }}>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
-              <div className={styles.carousel_rel_image}>
-                <img src={state.image} alt="" />
-                <p>Related Product</p>
-              </div>
+            <Slider {...secondSettings} style={{ width: "100%" }}>
+              {products[0].items.map((product, i) => (
+                <div key={i} className={styles.carousel_rel_image}>
+                  <img src={product.image} alt="" />
+                  <p style={{ fontSize: "0.8rem" }}>{product.name}</p>
+                </div>
+              ))}
             </Slider>
           </div>
         </div>

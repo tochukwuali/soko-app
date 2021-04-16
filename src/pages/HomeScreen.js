@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import styles from "../styles/HomeScreen.module.css";
-import { IconContext } from "react-icons";
-import { FiChevronRight, FiSearch } from "react-icons/fi";
-import { IoSadOutline } from "react-icons/io5";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
+import MobileCarousel from "../components/MobileCarousel";
 import Items from "./Items";
 import { Count } from "../components/shared/StyledDiv";
+import { RightIcon, SearchIcon, SadFaceIcon } from "../components/shared/Icons";
 
 import { ProductContext } from "../GlobalState";
 
@@ -27,46 +26,32 @@ const HomeScreen = () => {
               className={styles.search__input}
             />
             <button className={styles.search__btn}>
-              <IconContext.Provider
-                value={{
-                  size: "1.3em",
-                  color: "#2666cc",
-                  style: {
-                    verticalAlign: "middle",
-                  },
-                }}
-              >
-                <FiSearch />
-              </IconContext.Provider>
+              <SearchIcon />
             </button>
           </div>
         </div>
         <div className={styles.hm__content}>
           <div className={styles.hm__aside_left}>
-            {products.map((product) => (
-              <div key={product.id}>
-                <div
-                  className={styles.product__category}
-                  onClick={() => handleCatOpen(product.id)}
-                >
-                  <p>{product.category} </p>
-                  <span>({product.count})</span>
-                </div>
-              </div>
-            ))}
-            <div className={styles.hm__viewall_link}>
-              <IconContext.Provider
-                value={{
-                  size: "1.2em",
-                  color: "#2666cc",
-                  style: { verticalAlign: "middle" },
-                }}
-              >
-                <h4>
-                  View all Categories <FiChevronRight />
-                </h4>
-              </IconContext.Provider>
+            <div className={styles.hm__aside_left_mhead}>
+              <p>TOP CATEGORIES</p>
             </div>
+            <div className={styles.hm__aside_left_desktop}>
+              {products.map((product) => (
+                <div key={product.id}>
+                  <div
+                    className={styles.product__category}
+                    onClick={() => handleCatOpen(product.id)}
+                  >
+                    <p>{product.category} </p>
+                    <span>({product.count})</span>
+                  </div>
+                </div>
+              ))}
+              <div className={styles.hm__viewall_link}>
+                <RightIcon />
+              </div>
+            </div>
+            <MobileCarousel />
           </div>
           <div className={styles.hm__middle}>
             <Items />
@@ -79,14 +64,7 @@ const HomeScreen = () => {
               </Count>
             </div>
             <div className={styles.sadface__icon}>
-              <IconContext.Provider
-                value={{
-                  size: "8em",
-                  color: "#6e6e6e",
-                }}
-              >
-                <IoSadOutline />
-              </IconContext.Provider>
+              <SadFaceIcon />
             </div>
             <div className={styles.bag__body}>
               <h4>It's empty here</h4>

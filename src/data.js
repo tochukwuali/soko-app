@@ -4,6 +4,7 @@ const PRODUCTS = [
     category: "Electronics",
     active: true,
     count: 12,
+    pic: "images/macbook.jpg",
     items: [
       {
         item_id: 1,
@@ -60,12 +61,46 @@ const PRODUCTS = [
         countInStock: 30,
         cartQuantity: 0,
       },
+      {
+        item_id: 6,
+        name: "2020 Macbook Pro",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
+        price: 9500,
+        image: "/images/macbook.jpg",
+        discount: 0,
+        countInStock: 30,
+        cartQuantity: 0,
+      },
+      {
+        item_id: 7,
+        name: "Grocery shopping",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
+        price: 1000,
+        image: "/images/grocery.jpg",
+        discount: 0,
+        countInStock: 30,
+        cartQuantity: 0,
+      },
+      {
+        item_id: 8,
+        name: "Alternative Ground Protein - 160oz - Good & Gather",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
+        price: 12000,
+        image: "/images/beans.jfif",
+        discount: 0,
+        countInStock: 30,
+        cartQuantity: 0,
+      },
     ],
   },
   {
     id: 2,
     category: "Face Masks",
     count: 3,
+    pic: "/images/face_mask.jpg",
     items: [
       {
         item_id: 1,
@@ -129,6 +164,7 @@ const PRODUCTS = [
     id: 3,
     category: "Fresh Food",
     count: 8,
+    pic: "images/grocery.jpg",
     items: [
       {
         item_id: 1,
@@ -192,6 +228,7 @@ const PRODUCTS = [
     id: 4,
     category: "Grocery",
     count: 6,
+    pic: "/images/beans.jfif",
     items: [
       {
         item_id: 1,
@@ -255,6 +292,7 @@ const PRODUCTS = [
     id: 5,
     category: "Home",
     count: 24,
+    pic: "/images/bench.jpg",
     items: [
       {
         item_id: 1,
@@ -318,6 +356,7 @@ const PRODUCTS = [
     id: 6,
     category: "Kids",
     count: 9,
+    pic: "images/stool.jpg",
     items: [
       {
         item_id: 1,

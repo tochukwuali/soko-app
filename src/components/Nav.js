@@ -4,7 +4,6 @@ import { FiShoppingBag } from "react-icons/fi";
 import { IoPersonOutline } from "react-icons/io5";
 import styles from "../styles/Nav.module.css";
 import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
 
 const Nav = () => {
   return (
@@ -28,9 +27,7 @@ const Nav = () => {
           </div>
           {/* <Title title={title} /> */}
         </div>
-        <div className={styles.bottom_navbar}>
-          <Navbar fixed="bottom" />
-        </div>
+
         <div className={styles.navbar__right}>
           <IconContext.Provider
             value={{

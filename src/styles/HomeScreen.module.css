@@ -10,6 +10,10 @@
   /* margin-top: -0.3rem; */
 }
 
+.hm__aside_left_mhead {
+  display: none;
+}
+
 .product__category {
   padding: 0 0;
   display: flex;
@@ -76,7 +80,7 @@
 
 .hm__aside_right {
   width: 25%;
-  padding: 1rem;
+  padding: 1.8rem 1rem;
 }
 
 .category__count {
@@ -98,7 +102,7 @@
 }
 
 .hm__aside_right .bag__title h4 {
-  color: #161616;
+  color: #5e5e5e;
 }
 
 .sadface__icon {
@@ -158,9 +162,17 @@
 
   .hm__aside_left {
     width: 100%;
-    display: flex;
+    padding: 2rem 0;
   }
   .hm__aside_right {
     display: none;
+  }
+
+  .hm__aside_left_desktop {
+    display: none;
+  }
+
+  .hm__aside_left_mhead {
+    display: inline;
   }
 }

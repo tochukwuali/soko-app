@@ -9,8 +9,8 @@ import { AddIcon } from "../components/shared/Icons";
 const Items = () => {
   const { selectedI, products } = useContext(ProductContext);
 
-  const productsamp = products[0].items;
-  const categorysamp = products[0];
+  const productsamp = products[1].items;
+  const categorysamp = products[1];
 
   const [state, setState] = useState(productsamp);
   const [category, setCategory] = useState(categorysamp);
