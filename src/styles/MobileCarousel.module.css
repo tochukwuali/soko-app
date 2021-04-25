@@ -1,6 +1,6 @@
-/* .mobile_carousel {
+.mobile_carousel {
   display: none;
-} */
+}
 
 @media (max-width: 700px) {
   .mobile_carousel {
