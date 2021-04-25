@@ -5,6 +5,7 @@
 @media (max-width: 700px) {
   .mobile_carousel {
     width: 100%;
+    display: block;
   }
 
   .mobile_carousel_image {
