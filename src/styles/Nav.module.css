@@ -81,7 +81,7 @@
 
   .navbar__icon {
     height: 60px;
-    width: 70px;
+    width: 80px;
     margin-top: 0;
   }
 
@@ -105,5 +105,9 @@
 
   .nav_bottom_item {
     text-align: center;
+  }
+
+  .nav_bottom_item small {
+    color: #6e6e6e;
   }
 }

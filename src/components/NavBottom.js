@@ -36,13 +36,7 @@ const NavBottom = () => {
       <div className={styles.nav_bottom_flex}>
         {NavItems.map((item, i) => (
           <div key={i} className={styles.nav_bottom_item}>
-            <NavLink
-              to={item.path}
-              // activeStyle={{
-              //   fontWeight: "bold",
-              //   color: "#2666ee",
-              // }}
-            >
+            <NavLink to={item.path}>
               <div>{item.icon}</div>
               <small>{item.title}</small>
             </NavLink>

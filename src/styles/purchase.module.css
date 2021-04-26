@@ -1,10 +1,10 @@
 .purchase_container {
-    padding: 0 10rem;
+  padding: 0 10rem;
 }
 
 .purchase_content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .purchase_content small {
@@ -12,15 +12,15 @@
 }
 
 .purchase_order_details {
-    display: flex;
-    padding: 2rem 0;
+  display: flex;
+  padding: 2rem 0;
 }
 
 .purchase_order_st {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: .15rem solid #d4d4d4;
+  border: 0.15rem solid #d4d4d4;
   background: #fff;
   color: #9c9c9c;
   justify-content: center;
@@ -30,18 +30,19 @@
   margin-top: -0.3rem;
 }
 
+.purchase_account,
+.purchase_payment,
+.purchase_address {
+  display: flex;
+}
 
-.purchase_account, .purchase_payment, .purchase_address {
-display: flex;
-} 
+.purchase_payment {
+  margin-top: 5px;
+}
 
- .purchase_payment {
-   margin-top: 5px;
- }
-
- .purchase_address_order {
-   margin-top: 1px;
- }
+.purchase_address_order {
+  margin-top: 1px;
+}
 
 .purchase_account h3 {
   padding-bottom: 0.4rem;
@@ -56,7 +57,7 @@ display: flex;
 .purchase_buyer_input label {
   font-size: 0.8rem;
   color: #6e6e6e;
-  padding-bottom: 8px; 
+  padding-bottom: 8px;
 }
 
 .purchase_buyer_input input {
@@ -76,10 +77,10 @@ display: flex;
 }
 
 .purchase_items {
-    padding: 2rem;
-    border-left: 1px solid #afadad;
-    height: 100vh;
-    width: 35%;
+  padding: 2rem;
+  border-left: 1px solid #afadad;
+  height: 100vh;
+  width: 35%;
 }
 
 .purchase_item_title {
@@ -87,8 +88,8 @@ display: flex;
 }
 
 .purchase_items_content {
-   display: flex; 
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .purchase_item {
@@ -97,7 +98,7 @@ display: flex;
   padding: 0.2rem 0;
 }
 
-.purchase_item>div:last-child {
+.purchase_item > div:last-child {
   margin-top: 3rem;
 }
 
@@ -111,10 +112,26 @@ display: flex;
 }
 
 .purchase_items_summary {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .purchase_items_content small {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .purchase_container {
+    padding: 0rem;
+    width: 100%;
+  }
+  .purchase_order_details {
+    display: none;
+  }
+
+  .purchase_items {
+    width: 100%;
+    border-left: none;
+    padding: 0 1rem;
+  }
 }

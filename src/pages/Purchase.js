@@ -109,7 +109,7 @@ const Purchase = ({ history }) => {
                         />
                         <InputButton
                           onClick={handleShow}
-                          disabled={phone.length < 9}
+                          disabled={phone.length < 1}
                           phone={phone}
                         >
                           Login
