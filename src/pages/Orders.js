@@ -16,7 +16,7 @@ const Orders = () => {
           </div>
           <div className={styles.orders_body_input}>
             <label>Phone Number</label>
-            <input type="number" />
+            <input type="number" placeholder="00 000 0000" />
           </div>
           <div className={styles.orders_body_btn}>
             <YellowBgButton>Send Verification Code</YellowBgButton>

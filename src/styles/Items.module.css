@@ -92,6 +92,15 @@
 
   .product__name {
     margin-left: 0.3rem;
-    width: 80%;
+    width: 75%;
+    padding: 0 0.3rem;
+  }
+  .product__name p {
+    font-size: 0.8rem;
+  }
+
+  .product_image {
+    align-self: center;
+    justify-self: center;
   }
 }

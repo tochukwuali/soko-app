@@ -93,9 +93,10 @@
     color: black;
     display: inline;
     height: 60px;
-    border-top: rgb(138, 139, 139);
+    border-top: 1px solid rgba(197, 197, 197, 0.568);
     background: #fff;
-    padding: 0.7rem 2rem;
+    padding: 0.7rem 1.8rem;
+    z-index: 999;
   }
 
   .nav_bottom_flex {

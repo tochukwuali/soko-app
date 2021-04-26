@@ -16,7 +16,7 @@ const NavItems = [
   {
     icon: <GridIcon />,
     title: "Category",
-    path: "/items",
+    path: "/categories",
   },
   {
     icon: <BagIcon />,

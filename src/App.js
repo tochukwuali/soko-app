@@ -12,6 +12,7 @@ import Account from "./pages/Account";
 import SuccessPurchase from "./pages/SuccessPurchase";
 import NavBottom from "./components/NavBottom";
 import Orders from "./pages/Orders";
+import MobileCategories from "./pages/MobileCategories/MobileCategories";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/account" component={Account} />
             <Route exact path="/purchase/success" component={SuccessPurchase} />
             <Route exact path="/orders" component={Orders} />
+            <Route exact path="/categories" component={MobileCategories} />
           </main>
         </Switch>
       </div>

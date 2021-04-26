@@ -7,7 +7,7 @@ const MobileCarousel = () => {
   const { products } = useContext(ProductContext);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     arrows: false,
     speed: 500,
@@ -46,7 +46,12 @@ const MobileCarousel = () => {
       <Slider {...settings} style={{ width: "100%" }}>
         {products.map((product, i) => (
           <div key={i} className={styles.mobile_carousel_image}>
-            <img src={product.pic} alt="" />
+            <div className={styles.mobile_carousel_image_bg}>
+              <img src={product.pic} alt={product.category} />
+              <div className={styles.mobile_carousel_category_name}>
+                <p>{product.category}</p>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>

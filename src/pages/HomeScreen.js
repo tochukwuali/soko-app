@@ -3,9 +3,10 @@ import styles from "../styles/HomeScreen.module.css";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import MobileCarousel from "../components/MobileCarousel";
+import SearchBar from "../components/SearchBar";
 import Items from "./Items";
 import { Count } from "../components/shared/StyledDiv";
-import { RightIcon, SearchIcon, SadFaceIcon } from "../components/shared/Icons";
+import { RightIcon, SadFaceIcon } from "../components/shared/Icons";
 
 import { ProductContext } from "../GlobalState";
 
@@ -18,18 +19,7 @@ const HomeScreen = () => {
   return (
     <div>
       <div className={styles.hm__container}>
-        <div className={styles.hm__search_flex}>
-          <div className={styles.hm__search_bar}>
-            <input
-              type="text"
-              placeholder="Search For Products..."
-              className={styles.search__input}
-            />
-            <button className={styles.search__btn}>
-              <SearchIcon />
-            </button>
-          </div>
-        </div>
+        <SearchBar />
         <div className={styles.hm__content}>
           <div className={styles.hm__aside_left}>
             <div className={styles.hm__aside_left_mhead}>
