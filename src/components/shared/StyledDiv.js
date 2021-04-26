@@ -144,7 +144,7 @@ export const YellowBgButton = styled.button`
   margin-top: 1.2rem;
   background: #f3d632;
   color: #2666cc;
-  width: 90%;
+  width: 100%;
   border: 1px solid #f3d632;
   border-radius: 5px;
   cursor: pointer;

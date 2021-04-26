@@ -120,6 +120,10 @@
   text-decoration: underline;
 }
 
+.mobile_checkout_btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .purchase_container {
     padding: 0rem;
@@ -133,5 +137,9 @@
     width: 100%;
     border-left: none;
     padding: 0 1rem;
+  }
+
+  .mobile_checkout_btn {
+    display: block;
   }
 }

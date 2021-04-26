@@ -282,6 +282,9 @@ const Purchase = ({ history }) => {
           <small style={{ color: "#2cdb60", fontWeight: "500" }}>
             You're about to save UGX... on this order
           </small>
+          <div className={styles.mobile_checkout_btn}>
+            <YellowBgButton>CheckOut</YellowBgButton>
+          </div>
         </div>
       </div>
     </div>

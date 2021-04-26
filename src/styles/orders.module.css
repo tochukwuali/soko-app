@@ -1,0 +1,27 @@
+@media (max-width: 700px) {
+  .orders_container {
+    padding: 0 1rem;
+  }
+  .orders_header {
+    text-align: center;
+    color: #2666ee;
+  }
+  .orders_body {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .orders_body_input {
+    margin-top: 2rem;
+  }
+
+  .orders_body_input input {
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+  }
+
+  .orders_body_btn {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}

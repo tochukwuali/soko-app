@@ -11,6 +11,7 @@ import Purchase from "./pages/Purchase";
 import Account from "./pages/Account";
 import SuccessPurchase from "./pages/SuccessPurchase";
 import NavBottom from "./components/NavBottom";
+import Orders from "./pages/Orders";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/purchase" component={Purchase} />
             <Route path="/account" component={Account} />
             <Route exact path="/purchase/success" component={SuccessPurchase} />
+            <Route exact path="/orders" component={Orders} />
           </main>
         </Switch>
       </div>
